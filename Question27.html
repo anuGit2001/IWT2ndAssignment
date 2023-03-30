@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="clock"></div>
+    <script>
+       function clck()
+       {
+        d=new Date();
+        hh=d.getHours();
+        mm=d.getMinutes();
+        ss=d.getSeconds();
+        if(parseInt(ss)<10)
+        ss='0'+ss;
+        if(parseInt(mm)<10)
+        mm='0'+mm;
+        if(parseInt(hh)<10)
+        hh='0'+hh;
+        cTime=hh+":"+mm+":"+ss;
+        block=document.getElementById('clock');
+        block.innerHTML=cTime;
+        if (ss<30)
+         block.setAttribute("style","color:green");
+        else
+          block.setAttribute("style","color:red");
+       }
+        setInterval(clck,1000);
+    </script>
+    
+</body>
+</html>

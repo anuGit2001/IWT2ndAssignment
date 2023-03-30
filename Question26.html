@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop clock</title>
+
+</head>
+<body>
+   <div id="count"></div>
+   <button onclick="x=setInterval(start,1000)" >START</button>
+   <button onclick="clearInterval(x)" >PAUSE</button>
+   <button onclick="reset()" >STOP</button>
+   <script>
+    count=0;
+    
+    function start(){
+        block=document.getElementById("count");
+        block.innerHTML=count;
+        count++;
+    }
+    function pause()
+    {
+        block=document.getElementById("count");
+
+    }
+    function reset()
+    {
+        block=document.getElementById("count");
+        block.innerHTML=count;
+        count=0;
+
+    }
+   </script>
+
+</body>
+</html>

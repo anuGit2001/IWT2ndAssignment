@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label><h1>Enter your  name:</h1></label>
+    <input type='text' id='nm'>
+    
+    <button onclick='clck()'>Click me</button>
+    <div id="clock" onclick='hide()'></div>
+
+    <script>
+       function clck()
+       {
+        
+        nme=document.getElementById('nm').value;
+        dt=new Date();
+        hrs=dt.getHours();
+        if(hrs<12)
+           greet="Good Morning"+nme;
+        else if((hrs>12)&&(hrs<17))
+           greet="Good Afternoon"+nme;
+        else
+            greet="Good evening "+nme;
+      
+        block=document.getElementById('clock');
+        //block.style.color=red;
+        block.innerHTML=greet;
+        block.setAttribute("style","color:red;font-size:50px");
+        
+       }
+      function hide()
+      {
+         block=document.getElementById('clock');
+         block.style.display='none';
+         
+       }
+        
+        
+    </script>
+    
+</body>
+</html>
